@@ -2,15 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
+import { HnHeaderComponent } from './hn-header/hn-header.component';
+//import 'hammerjs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HnHeaderComponent
   ],
   imports: [
     BrowserModule,
+    MaterialModule.forRoot(),
     FormsModule,
     HttpModule
   ],

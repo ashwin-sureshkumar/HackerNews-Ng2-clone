@@ -1,0 +1,19 @@
+@import '../shared/scss/settings';
+@import '../shared/scss/mixins';
+
+li {
+  display: inline;
+  font-size: em(12);
+}
+
+li {
+  &::after {
+    content: '|';
+    padding: em(5);
+  }
+
+  &:last-child::after {
+    content : '';
+  }
+
+}

@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';
+
+@import "./app/shared/scss/settings";
+@import "./app/shared/scss/mixins";
+
+
+html {
+      font-size: em(14,14);
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
 body {
     margin : 0;
+    font-family: 'Roboto, sans-serif';
+}
+
+ul {
+  list-style: none;
 }
