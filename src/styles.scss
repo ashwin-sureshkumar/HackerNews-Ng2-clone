@@ -2,14 +2,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';
 
-@import "./app/shared/scss/settings";
-@import "./app/shared/scss/mixins";
-
-
-html {
-      font-size: em(14,14);
-}
-
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

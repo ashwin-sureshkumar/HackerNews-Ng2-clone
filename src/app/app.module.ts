@@ -4,19 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
-import { HnHeaderComponent } from './hn-header/hn-header.component';
-//import 'hammerjs';
+import { HeaderComponent } from './header/header.component';
+import { NewestModule } from './newest/newest.module';
+import { routes } from './app.routing';
+import { RouterModule } from '@angular/router';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HnHeaderComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule.forRoot(),
-    FormsModule,
-    HttpModule
+    RouterModule.forRoot(routes),
+    NewestModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HnHeaderComponent } from './hn-header.component';
+import { HeaderComponent } from './header.component';
 
-describe('HnHeaderComponent', () => {
-  let component: HnHeaderComponent;
-  let fixture: ComponentFixture<HnHeaderComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HnHeaderComponent ]
+      declarations: [ HeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HnHeaderComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -25,9 +25,4 @@ describe('HnHeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  // it('should contain nav elements (new|comments|show|ask|jobs)', () => {
-  //   const de = fixture.debugElement.query(By.css('nav > ul li'));
-  //   console.log(de.nativeElement);
-  // });
 });

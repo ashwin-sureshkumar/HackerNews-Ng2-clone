@@ -1,15 +1,12 @@
-@import '../shared/scss/settings';
-@import '../shared/scss/mixins';
-
 li {
   display: inline;
-  font-size: em(12);
+  font-size: 12px;
 }
 
 li {
   &::after {
     content: '|';
-    padding: em(5);
+    padding: 5px;
   }
 
   &:last-child::after {
