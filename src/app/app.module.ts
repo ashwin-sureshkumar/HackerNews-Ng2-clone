@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { NewestModule } from './newest/newest.module';
 import { routes } from './app.routing';
 import { RouterModule } from '@angular/router';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { ServicesModule } from './shared/services/services.module';
+import * as firebase from 'firebase';
 import 'hammerjs';
 
 @NgModule({
@@ -19,6 +23,8 @@ import 'hammerjs';
     BrowserModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot(routes),
+    ServicesModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
     NewestModule
   ],
   providers: [],
