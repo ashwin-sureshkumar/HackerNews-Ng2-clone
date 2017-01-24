@@ -1,5 +1,2 @@
-<ul>
-  <li *ngFor="let item of items | async">
-    <hn-min-story [item]="item.$value"></hn-min-story>
-  </li>
-</ul>
+<hn-min-story *ngFor="let item of items | async" [item]="item.$value"></hn-min-story>
+

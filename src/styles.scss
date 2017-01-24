@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';
+// @import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';
+@import '~@angular/material/core/theming/all-theme';
+@include md-core();
+$primary: md-palette($md-orange, 800);
+$accent:  md-palette($md-light-blue, 600, A100, A400);
+$warn:    md-palette($md-red, 600);
+$theme: md-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -16,3 +23,4 @@ body {
 ul {
   list-style: none;
 }
+

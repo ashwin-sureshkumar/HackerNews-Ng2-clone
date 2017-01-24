@@ -11,12 +11,16 @@ import { Observable } from 'rxjs';
 export class MinStoryComponent implements OnInit {
   story: any;
 
+  hackerNewsService: HackerNewsService;
+
   @Input()
   set item(item: number) {
-    this.story = this.hackerNewsService.getItem(item).subscribe((story) => this.story = story);
+    this.hackerNewsService.getItem(item).subscribe((story) => this.story = story);
   };
 
-  constructor(private hackerNewsService: HackerNewsService) { }
+  constructor(hackerNewsService: HackerNewsService) {
+    this.hackerNewsService = hackerNewsService;
+  }
 
   ngOnInit() {
 

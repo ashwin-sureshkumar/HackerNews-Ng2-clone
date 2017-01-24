@@ -7,7 +7,6 @@ export class HackerNewsService {
   constructor(private af: AngularFire) { }
 
   getNewestStories() {
-    console.log(this.af.database)
     return this.af.database.list('/v0/newstories', {
       query: {
         limitToLast: 10

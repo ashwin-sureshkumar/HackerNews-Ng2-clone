@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { ServicesModule } from './shared/services/services.module';
 import * as firebase from 'firebase';
+
 import 'hammerjs';
 
 @NgModule({

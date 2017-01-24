@@ -13,7 +13,7 @@ export class NewestComponent implements OnInit {
   constructor(private hackerNewsService: HackerNewsService) { }
 
   ngOnInit() {
-    this.items = this.hackerNewsService.getNewestStories().do(console.log);
+    this.items = this.hackerNewsService.getNewestStories();
   }
 
 }

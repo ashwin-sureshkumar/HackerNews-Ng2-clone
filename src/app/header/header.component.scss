@@ -1,9 +1,7 @@
 li {
   display: inline;
   font-size: 12px;
-}
 
-li {
   &::after {
     content: '|';
     padding: 5px;
@@ -13,4 +11,12 @@ li {
     content : '';
   }
 
+}
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:1;
 }
