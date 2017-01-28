@@ -1,2 +1,1 @@
-<hn-min-story *ngFor="let item of items | async" [item]="item.$value"></hn-min-story>
-
+<hn-story *ngFor="let story of newestStories | async; trackBy : trackByForStory" [id]="story.$value"></hn-story>

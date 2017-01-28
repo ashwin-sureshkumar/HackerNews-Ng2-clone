@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MinStoryComponent } from './min-story.component';
+import { TopStoriesComponent } from './top-stories.component';
 
-describe('MinStoryComponent', () => {
-  let component: MinStoryComponent;
-  let fixture: ComponentFixture<MinStoryComponent>;
+describe('TopStoriesComponent', () => {
+  let component: TopStoriesComponent;
+  let fixture: ComponentFixture<TopStoriesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MinStoryComponent ]
+      declarations: [ TopStoriesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MinStoryComponent);
+    fixture = TestBed.createComponent(TopStoriesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,14 +6,16 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NewestModule } from './newest/newest.module';
+import { TopStoriesModule } from './top-stories/top-stories.module';
 import { routes } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from 'angularfire2';
 import { ServicesModule } from './shared/services/services.module';
+import { AngularFireModule } from 'angularfire2';
 import * as firebase from 'firebase';
-
+import * as moment from 'moment';
 import 'hammerjs';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +26,14 @@ import 'hammerjs';
     BrowserModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp({
+      apiKey: 'AIzaSyCtpUqWGuXLxyvRw91QtDFyTxMRptlxfws',
+      databaseURL: 'https://hacker-news.firebaseio.com',
+      authDomain: 'hackernews-clone.firebaseapp.com'
+    }),
     ServicesModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase),
-    NewestModule
+    NewestModule,
+    TopStoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

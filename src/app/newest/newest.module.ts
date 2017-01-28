@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ComponentsModule } from '../shared/components/components.module'
 import { NewestComponent } from './containers/newest/newest.component';
-import { MinStoryComponent } from './containers/min-story/min-story.component';
-import { MdToolbarModule, MdCardModule, MdIconModule } from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule,
-    MdToolbarModule,
-    MdCardModule,
-    MdIconModule
+    ComponentsModule
   ],
-  declarations: [NewestComponent, MinStoryComponent]
+  declarations: [NewestComponent]
 })
 export class NewestModule { }

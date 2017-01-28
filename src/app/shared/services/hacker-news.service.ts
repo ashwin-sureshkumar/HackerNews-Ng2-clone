@@ -6,10 +6,18 @@ export class HackerNewsService {
 
   constructor(private af: AngularFire) { }
 
-  getNewestStories() {
+  getNewestStories(limit: number) {
     return this.af.database.list('/v0/newstories', {
       query: {
-        limitToLast: 10
+        limitToFirst: limit
+      }
+    });
+  }
+
+  getTopStories(limit: number) {
+    return this.af.database.list('/v0/topstories', {
+      query: {
+        limitToFirst: limit
       }
     });
   }

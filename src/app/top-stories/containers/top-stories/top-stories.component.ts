@@ -4,13 +4,13 @@ import { FirebaseListObservable } from 'angularfire2';
 import { Observable  } from 'rxjs';
 
 @Component({
-  selector: 'hn-newest',
-  templateUrl: './newest.component.html',
-  styleUrls: ['./newest.component.scss']
+  selector: 'hn-top-stories',
+  templateUrl: './top-stories.component.html',
+  styleUrls: ['./top-stories.component.scss']
 })
-export class NewestComponent implements OnInit {
+export class TopStoriesComponent implements OnInit {
 
-  newestStories: Observable<any>;
+  topStories: Observable<any>;
 
   private limit: number = 100;
 
@@ -18,13 +18,12 @@ export class NewestComponent implements OnInit {
 
   ngOnInit() {
 
-    this.newestStories = this.hackerNewsService.getNewestStories(this.limit);
+    this.topStories = this.hackerNewsService.getTopStories(this.limit);
 
   }
 
   trackByForStory(index: number, item: any) {
     return item.id;
   }
-
 
 }
