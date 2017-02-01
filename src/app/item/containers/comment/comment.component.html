@@ -1,0 +1,9 @@
+<div *ngIf="comment && comment.text?.length">
+  <div class="meta">
+    <span class="name">{{ comment.by }}</span>
+    <span class="time-ago"> - {{ comment.time | amFromUnix |  amTimeAgo }}</span> 
+    <span class="expander" (click)="visible = !visible">[{{ visible ? '-' : '+' + (comment.kids ? comment.kids.length : '') }}]</span>
+  </div>
+  <div class="text" [innerHTML]="comment.text" [hidden]="!visible"></div>
+  <hn-comments [ids]="comment.kids"></hn-comments>
+</div>

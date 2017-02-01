@@ -5,8 +5,8 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { NewestModule } from './newest/newest.module';
-import { TopStoriesModule } from './top-stories/top-stories.module';
+import { FeedsModule } from './feeds/feeds.module';
+import { ItemModule } from './item/item.module';
 import { routes } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
@@ -32,8 +32,8 @@ import 'hammerjs';
       authDomain: 'hackernews-clone.firebaseapp.com'
     }),
     ServicesModule.forRoot(),
-    NewestModule,
-    TopStoriesModule
+    FeedsModule,
+    ItemModule
   ],
   providers: [],
   bootstrap: [AppComponent]

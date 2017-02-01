@@ -1,0 +1,18 @@
+:host {
+    word-break: break-all;
+}
+
+.text {
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.meta {
+    margin-bottom: 5px;
+    .name, .expander {
+        color: #c2185b;
+    }
+    .time-ago {
+        color: grey;
+    }
+}
