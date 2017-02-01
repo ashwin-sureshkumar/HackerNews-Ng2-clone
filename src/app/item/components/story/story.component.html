@@ -1,0 +1,12 @@
+<div *ngIf="story">
+    <h2>{{story.title}}</h2>
+    <div class="meta">
+      <span *ngIf="story.score">{{story.score}} {{story.score > 1 ? 'points' : 'point' }} |</span>
+      by: <span class="emphasize">{{ story.by  }}</span> |
+      {{ story.time | amFromUnix | amTimeAgo }}
+      <span class="emphasize" *ngIf="story.descendants">
+        | {{ story.descendants }} {{ story.descendants > 1 ? 'comments' : 'comment' }}
+      </span>
+    </div>
+    <hn-comment [id]="id" *ngFor="let id of story.kids"></hn-comment>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="comment && comment.text?.length">
+  <div class="meta">
+    <span class="name">{{ comment.by }}</span>
+    <span class="time-ago"> - {{ comment.time | amFromUnix |  amTimeAgo }}</span>
+    <span class="expander" [ngClass]="{ 'open' : visible }" (click)="visible = !visible"></span>
+  </div>
+  <div  [hidden]="!visible">
+    <div class="text" [innerHTML]="comment.text"></div>
+    <hn-comment [id]="id" *ngFor="let id of comment.kids"></hn-comment>
+  </div>
+</div>

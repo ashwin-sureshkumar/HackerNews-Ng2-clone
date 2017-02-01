@@ -1,20 +1,40 @@
 import { Routes } from '@angular/router';
-import { NewestComponent } from './newest/containers/newest/newest.component';
-import { TopStoriesComponent } from './top-stories/containers/top-stories/top-stories.component';
-
+import { FeedsComponent }  from './feeds/containers/feeds/feeds.component';
+import { ItemComponent }  from './item/containers/item/item.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/top-stories',
+    redirectTo: '/top',
     pathMatch : 'full'
   },
   {
-    path: 'top-stories',
-    component: TopStoriesComponent
+    path: 'top',
+    component: FeedsComponent
   },
   {
      path: 'newest',
-     component : NewestComponent
+     component : FeedsComponent
+  },
+  {
+     path: 'best',
+     component: FeedsComponent
+  },
+  {
+     path: 'ask',
+     component: FeedsComponent
+  },
+  {
+     path: 'show',
+     component: FeedsComponent
+  },
+  {
+     path: 'jobs',
+     component: FeedsComponent
+  },
+  {
+    path: 'item/:id',
+    component: ItemComponent
   }
 ];
+
 

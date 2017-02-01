@@ -1,0 +1,11 @@
+<md-card *ngIf="item">
+  <md-card-content [routerLink]="['/item', item.id ]">
+    <h3>{{ item.title }}</h3>
+    <footer>
+      <span *ngIf="item.score">{{item.score}} {{item.score > 1 ? 'points' : 'point' }} |</span>
+      by: <span class="emphasize">{{ item.by  }}</span> |
+      {{ item.time | amFromUnix | amTimeAgo }}
+      <span class="emphasize" *ngIf="item.descendants">| {{ item.descendants }} {{ item.descendants > 1 ? 'comments' : 'comment' }}</span>
+    </footer>
+  </md-card-content>
+</md-card>
